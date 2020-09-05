@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Health Tweet analysis</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: #2196F3;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.74.3" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">Health Tweet analysis</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/">Home</a></li>
+                            
+                                <li><a href="/post/">Posts</a></li>
+                            
+                                <li><a href="/about/">About</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="mailto:yihunzeleke@outlook.com"><i class="fa fa-envelope-o"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://github.com/yihunzeleke/"><i class="fa fa-github"></i></a></li>
+                            
+                                <li class="navbar-icon"><a href="https://www.linkedin.com/in/yihun-zeleke-97a7a9171/"><i class="fa fa-linkedin"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>Health Tweet analysis</h2>
+        <h5>September 5, 2020</h5>
+        
+<a href="/tags/data-wragling"><kbd class="item-tag">data wragling</kbd></a>
+
+<a href="/tags/sentiment-analysis"><kbd class="item-tag">sentiment-analysis</kbd></a>
+
+<a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+
+<a href="/tags/text-mining"><kbd class="item-tag">text mining</kbd></a>
+
+<a href="/tags/topic-modeling"><kbd class="item-tag">topic modeling</kbd></a>
+
+<a href="/tags/visualization"><kbd class="item-tag">visualization</kbd></a>
+
+
+    </div>
+
+    <div align="start" class="content">
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="project-idea" class="section level2">
+<h2>Project idea</h2>
+<p>There are different health tweets from different news agencies. This health tweets from bbc, cbc,and many more.
+The data is publicly available <a href="https://archive.ics.uci.edu/ml/machine-learning-databases/00438/">here</a>.</p>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/socialmediatwitter.jpg" />
+<br/></p>
+</div>
+<div id="data-pre-processing" class="section level2">
+<h2>Data pre-processing</h2>
+<p>I will start by reading the all the <code>16</code> health tweets from news agencies.</p>
+<pre class="r"><code>library(dplyr)
+library(tidyr)
+library(purrr)
+library(readr)
+library(ggplot2)
+library(textdata)
+theme_set(theme_bw())</code></pre>
+<pre class="r"><code>raw_text &lt;- read_csv(&quot;https://raw.githubusercontent.com/yihunzeleke/data_repo/master/raw_text.csv&quot;)
+
+
+
+raw_text</code></pre>
+<pre><code>## # A tibble: 63,327 x 4
+##    newsgroup date       text                                                  id
+##    &lt;chr&gt;     &lt;date&gt;     &lt;chr&gt;                                              &lt;dbl&gt;
+##  1 bbchealth 2015-04-09 Breast cancer risk test devised http://bbc.in/1Ci~     1
+##  2 bbchealth 2015-04-08 GP workload harming care - BMA poll http://bbc.in~     1
+##  3 bbchealth 2015-04-08 Short people&#39;s &#39;heart risk greater&#39; http://bbc.in~     1
+##  4 bbchealth 2015-04-08 New approach against HIV &#39;promising&#39; http://bbc.i~     1
+##  5 bbchealth 2015-04-08 Coalition &#39;undermined NHS&#39; - doctors http://bbc.i~     1
+##  6 bbchealth 2015-04-08 Review of case against NHS manager http://bbc.in/~     1
+##  7 bbchealth 2015-04-08 VIDEO: &#39;All day is empty, what am I going to do?&#39;~     1
+##  8 bbchealth 2015-04-08 VIDEO: &#39;Overhaul needed&#39; for end-of-life care htt~     1
+##  9 bbchealth 2015-04-08 Care for dying &#39;needs overhaul&#39; http://bbc.in/1Fd~     1
+## 10 bbchealth 2015-04-07 VIDEO: NHS: Labour and Tory key policies http://b~     1
+## # ... with 63,317 more rows</code></pre>
+<p>The <code>newsgroup</code> column which describes which of the 16 newsgroups each tweets comes from. And the <code>id</code> column which generated from Tweeter while <code>date</code> is the date of tweets that made by the news agencies and the <code>text</code> column is the tweets from the news agencies.</p>
+<p>What news Agencies are included, and how many tweets were posted in each?</p>
+<pre class="r"><code>library(ggplot2)
+
+raw_text %&gt;% 
+  group_by(newsgroup) %&gt;%
+  count(newsgroup, sort = T) %&gt;% 
+  rename(`# tweets` = n) %&gt;% 
+   ggplot(aes(newsgroup,`# tweets`))+
+  geom_col()+
+  coord_flip()</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>As we from newsgroups <code>goodhealth</code> and <code>nytimeshealth</code> have higher tweets than others.</p>
+<div id="pre-processing-text" class="section level3">
+<h3>Pre-processing text</h3>
+<p>Text pre-processing is more complicated than numerical pre-processing. So we use different approach for the text pre-processing to ready for further analysis.</p>
+<pre class="r"><code>library(stringr)
+library(tidytext)
+library(SnowballC)
+
+reg_remove &lt;- &quot;&amp;amp;|&amp;lt;|&amp;gt;&quot;
+
+cleaned_text &lt;- raw_text %&gt;% 
+  filter(!str_detect(text,&quot;^RT&quot;)) %&gt;%  # RT means Retweet
+  mutate(text = str_remove_all(text,reg_remove)) %&gt;% 
+  #mutate(text =  str_replace_all(text,&quot;#[a-z,A-Z]*&quot;,&quot;&quot;)) %&gt;%  # removing hashtags
+  #mutate(text =  str_replace_all(text,&quot;@[a-z,A-Z]*&quot;,&quot;&quot;)) %&gt;% # removing @
+  mutate(text = gsub(&quot;\\s?(f|ht)(tp)(s?)(://)([^\\.]*)[\\.|/](\\S*)&quot;, &quot;&quot;, text)) # Remove https..
+
+cleaned_text  </code></pre>
+<pre><code>## # A tibble: 55,656 x 4
+##    newsgroup date       text                                                 id
+##    &lt;chr&gt;     &lt;date&gt;     &lt;chr&gt;                                             &lt;dbl&gt;
+##  1 bbchealth 2015-04-09 Breast cancer risk test devised                       1
+##  2 bbchealth 2015-04-08 GP workload harming care - BMA poll                   1
+##  3 bbchealth 2015-04-08 Short people&#39;s &#39;heart risk greater&#39;                   1
+##  4 bbchealth 2015-04-08 New approach against HIV &#39;promising&#39;                  1
+##  5 bbchealth 2015-04-08 Coalition &#39;undermined NHS&#39; - doctors                  1
+##  6 bbchealth 2015-04-08 Review of case against NHS manager                    1
+##  7 bbchealth 2015-04-08 VIDEO: &#39;All day is empty, what am I going to do?&#39;     1
+##  8 bbchealth 2015-04-08 VIDEO: &#39;Overhaul needed&#39; for end-of-life care         1
+##  9 bbchealth 2015-04-08 Care for dying &#39;needs overhaul&#39;                       1
+## 10 bbchealth 2015-04-07 VIDEO: NHS: Labour and Tory key policies              1
+## # ... with 55,646 more rows</code></pre>
+<pre class="r"><code>  health_tweets &lt;- cleaned_text %&gt;% 
+  unnest_tokens(word,text, token = &quot;tweets&quot;) %&gt;% 
+  filter(!word %in% stop_words$word,
+         !word %in% str_remove_all(stop_words$word, &quot;&#39;&quot;),
+         str_detect(word, &quot;[a-z]&quot;)) 
+health_tweets</code></pre>
+<pre><code>## # A tibble: 324,880 x 4
+##    newsgroup date          id word    
+##    &lt;chr&gt;     &lt;date&gt;     &lt;dbl&gt; &lt;chr&gt;   
+##  1 bbchealth 2015-04-09     1 breast  
+##  2 bbchealth 2015-04-09     1 cancer  
+##  3 bbchealth 2015-04-09     1 risk    
+##  4 bbchealth 2015-04-09     1 test    
+##  5 bbchealth 2015-04-09     1 devised 
+##  6 bbchealth 2015-04-08     1 gp      
+##  7 bbchealth 2015-04-08     1 workload
+##  8 bbchealth 2015-04-08     1 harming 
+##  9 bbchealth 2015-04-08     1 care    
+## 10 bbchealth 2015-04-08     1 bma     
+## # ... with 324,870 more rows</code></pre>
+</div>
+<div id="words-in-newsgroups" class="section level3">
+<h3>Words in newsgroups</h3>
+<p>Let’s explore common words in the entire dataset.</p>
+<pre class="r"><code>health_tweets %&gt;% 
+    count(word, sort = TRUE)</code></pre>
+<pre><code>## # A tibble: 30,954 x 2
+##    word         n
+##    &lt;chr&gt;    &lt;int&gt;
+##  1 health    4341
+##  2 ebola     3410
+##  3 study     2795
+##  4 cancer    1925
+##  5 care      1428
+##  6 risk      1417
+##  7 drug      1299
+##  8 patients  1178
+##  9 kids      1073
+## 10 heart     1007
+## # ... with 30,944 more rows</code></pre>
+<p>Most common words by newsgroup.</p>
+<pre class="r"><code>words_by_newsgroup &lt;- health_tweets %&gt;% 
+  count(newsgroup, word, sort = TRUE)
+
+words_by_newsgroup</code></pre>
+<pre><code>## # A tibble: 84,413 x 3
+##    newsgroup        word        n
+##    &lt;chr&gt;            &lt;chr&gt;   &lt;int&gt;
+##  1 reuters_heatlth  ebola    1241
+##  2 KaiserHealthNews health    929
+##  3 bbchealth        video     813
+##  4 msnhealthnews    study     762
+##  5 gdnhealthcare    #nhs      720
+##  6 nytimeshealth    health    624
+##  7 nprhealth        health    521
+##  8 gdnhealthcare    nhs       518
+##  9 nytimeshealth    ebola     480
+## 10 KaiserHealthNews reports   464
+## # ... with 84,403 more rows</code></pre>
+<div id="finding-tf-idf-within-newsgroup" class="section level4">
+<h4>Finding tf-idf within newsgroup</h4>
+<p>We see that the newsgroups to differ in terms of topic and content, and therefore the frequency of words to differ between them.</p>
+<pre class="r"><code>tf_idf &lt;-  words_by_newsgroup %&gt;% 
+  bind_tf_idf(word, newsgroup,n) %&gt;% 
+  arrange(desc(tf_idf))
+tf_idf</code></pre>
+<pre><code>## # A tibble: 84,413 x 6
+##    newsgroup        word                          n      tf   idf tf_idf
+##    &lt;chr&gt;            &lt;chr&gt;                     &lt;int&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+##  1 gdnhealthcare    #nhs                        720 0.0439   2.77 0.122 
+##  2 everydayhealth   #healthtalk                 335 0.0243   2.77 0.0673
+##  3 gdnhealthcare    nhs                         518 0.0316   2.08 0.0657
+##  4 bbchealth        nhs                         348 0.0212   2.08 0.0441
+##  5 gdnhealthcare    #viewsfromthenhsfrontline   190 0.0116   2.77 0.0321
+##  6 cnnhealth        #getfit                     249 0.0119   2.08 0.0247
+##  7 latimeshealth    #latfit                     205 0.00811  2.77 0.0225
+##  8 KaiserHealthNews cartoon                     218 0.0101   2.08 0.0210
+##  9 foxnewshealth    @newser                      88 0.00750  2.77 0.0208
+## 10 usnewshealth     #usntechchat                 43 0.00717  2.77 0.0199
+## # ... with 84,403 more rows</code></pre>
+<p><code>gdnhealthcare</code> newsgroups has highest tf_idf, so let’s examine to extract words specific to those topics.</p>
+<pre class="r"><code>tf_idf %&gt;% 
+  filter(newsgroup %in% c(&quot;gdnhealthcare&quot;,&quot;bbchealth&quot;,&quot;KaiserHealthNews&quot;,&quot;wsjhealth&quot;,&quot;reuters_heatlth&quot;)) %&gt;% 
+  group_by(newsgroup) %&gt;% 
+  top_n(10, tf_idf) %&gt;% 
+  ungroup() %&gt;% 
+  mutate(word = reorder( word, tf_idf)) %&gt;% 
+  ggplot(aes(word, tf_idf, fill = newsgroup))+
+  geom_col(show.legend = FALSE)+
+  facet_wrap( ~ newsgroup, scales = &quot;free&quot;)+
+  coord_flip()</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>What newsgroups tend to be similar each other in text content? I could discover this by finding the pairwise correlation of word frequencies within each newsgroup, using <code>pairwise_cor()</code> function.</p>
+<pre class="r"><code>library(widyr)
+
+newsgroup_cor &lt;- words_by_newsgroup %&gt;%
+  pairwise_cor(newsgroup,  word, n, sort = TRUE)
+
+newsgroup_cor</code></pre>
+<pre><code>## # A tibble: 240 x 3
+##    item1           item2           correlation
+##    &lt;chr&gt;           &lt;chr&gt;                 &lt;dbl&gt;
+##  1 nprhealth       nytimeshealth         0.836
+##  2 nytimeshealth   nprhealth             0.836
+##  3 latimeshealth   msnhealthnews         0.809
+##  4 msnhealthnews   latimeshealth         0.809
+##  5 cbchealth       nprhealth             0.807
+##  6 nprhealth       cbchealth             0.807
+##  7 cbchealth       reuters_heatlth       0.775
+##  8 reuters_heatlth cbchealth             0.775
+##  9 cbchealth       nytimeshealth         0.771
+## 10 nytimeshealth   cbchealth             0.771
+## # ... with 230 more rows</code></pre>
+<p>Let’s filter stronger correlations among newsgroups, and visualize them in network diagram.</p>
+<pre class="r"><code>library(ggraph)
+library(igraph)
+set.seed(2015)
+
+newsgroup_cor %&gt;% 
+  filter(correlation &gt; 0.4) %&gt;% 
+  graph_from_data_frame() %&gt;% 
+  ggraph(layout = &quot;fr&quot;) +
+  geom_edge_link(aes(alpha = correlation, width = correlation))+
+  geom_node_point(size = 4, color = &quot;skyblue&quot;)+
+  geom_node_text(aes(label = name), repel = TRUE)+
+  theme_void()</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Since the tweets from the same topic the newsgroups are inter-correlated, even though as we see from the graph it has mainly three clusters.</p>
+</div>
+</div>
+</div>
+<div id="topic-modeling" class="section level2">
+<h2>Topic Modeling</h2>
+<p>The Latent Dirichlet Allocation(LDA) algorithm to divide a set of texts from from newsgroups that has high tf_idf frequency that we saw earlier.</p>
+<pre class="r"><code>words_newsgroup &lt;- health_tweets %&gt;% 
+  filter(newsgroup %in% c(&quot;gdnhealthcare&quot;,&quot;bbchealth&quot;,&quot;KaiserHealthNews&quot;,&quot;wsjhealth&quot;)) %&gt;% 
+  group_by(word) %&gt;% 
+  mutate(word_total = n()) %&gt;% 
+  ungroup() %&gt;% 
+  filter(word_total &gt; 50) %&gt;% 
+  mutate(id =  as.character(id), word_total = as.character(word_total))
+  
+str(words_newsgroup)</code></pre>
+<pre><code>## tibble [20,318 x 5] (S3: tbl_df/tbl/data.frame)
+##  $ newsgroup : chr [1:20318] &quot;bbchealth&quot; &quot;bbchealth&quot; &quot;bbchealth&quot; &quot;bbchealth&quot; ...
+##  $ date      : Date[1:20318], format: &quot;2015-04-09&quot; &quot;2015-04-09&quot; ...
+##  $ id        : chr [1:20318] &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; ...
+##  $ word      : chr [1:20318] &quot;cancer&quot; &quot;risk&quot; &quot;test&quot; &quot;gp&quot; ...
+##  $ word_total: chr [1:20318] &quot;326&quot; &quot;129&quot; &quot;83&quot; &quot;115&quot; ...</code></pre>
+<p>Convert into a document-term matrix</p>
+<pre class="r"><code>newsgroup_dtm &lt;- words_newsgroup %&gt;% 
+  
+  unite(document,newsgroup,id) %&gt;% 
+  count(document, word) %&gt;% 
+  cast_dtm(document,word,n)</code></pre>
+<pre class="r"><code>library(topicmodels)
+newsgroup_lda &lt;- LDA(newsgroup_dtm, k = 4, control = list(seed = 2020))</code></pre>
+<p>What four topics did this model extract, and did they match the four newsgroups?</p>
+<pre class="r"><code>newsgroup_lda %&gt;% 
+  tidy() %&gt;% 
+  group_by(topic) %&gt;% 
+  top_n(8, beta) %&gt;%
+  ungroup() %&gt;% 
+  mutate(term = reorder_within(term,beta,topic)) %&gt;% 
+  ggplot(aes(term, beta , fill = factor(topic)))+
+  geom_col(show.legend = FALSE)+
+  facet_wrap( ~  topic, scales = &quot;free_y&quot;)+
+  coord_flip()+
+  scale_x_reordered()</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+</div>
+<div id="sentiment-analysis" class="section level2">
+<h2>Sentiment Analysis</h2>
+<p>Let’s examine how often positive and negative words occurred in the Health tweet posts. Which newsgroup were the most positive or negative word overall?</p>
+<p>I will use the <code>afinn</code> sentiment lexicon, which provides numeric positivity values for each word, and visualize with a bar plot.</p>
+<pre class="r"><code>newsgroup_sentiment &lt;- words_by_newsgroup %&gt;% 
+  inner_join(get_sentiments(&quot;afinn&quot;), by = &quot;word&quot;) %&gt;% 
+  group_by(newsgroup) %&gt;% 
+  summarise(value = sum(value*n) / sum(n))
+
+newsgroup_sentiment</code></pre>
+<pre><code>## # A tibble: 16 x 2
+##    newsgroup          value
+##    &lt;chr&gt;              &lt;dbl&gt;
+##  1 bbchealth        -0.716 
+##  2 cbchealth        -0.794 
+##  3 cnnhealth        -0.265 
+##  4 everydayhealth    0.0506
+##  5 foxnewshealth    -0.575 
+##  6 gdnhealthcare     0.153 
+##  7 goodhealth        0.657 
+##  8 KaiserHealthNews  0.0430
+##  9 latimeshealth    -0.448 
+## 10 msnhealthnews    -0.811 
+## 11 NBChealth        -0.635 
+## 12 nprhealth        -0.434 
+## 13 nytimeshealth    -0.397 
+## 14 reuters_heatlth  -0.540 
+## 15 usnewshealth      0.108 
+## 16 wsjhealth        -0.209</code></pre>
+<pre class="r"><code>newsgroup_sentiment %&gt;% 
+  mutate(newsgroup = reorder(newsgroup, value)) %&gt;% 
+  ggplot(aes(newsgroup, value, fill = value &gt; 0))+
+  geom_col(show.legend = FALSE)+
+  coord_flip()+
+  ylab(&quot;Average sentiment value&quot;)</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Based on this analysis, the “GoodHealth” newsgroup was the most positive. This makes sense, since it likely included many positive adjectives about health news.</p>
+<div id="sentiment-analysis-by-word" class="section level3">
+<h3>Sentiment analysis by word</h3>
+<p>It’s worth looking deeper to understand <em>why</em> some newsgroups ended up more positive or negative than others. For that, I can examine the total positive and negative contributions of each word.</p>
+<pre class="r"><code>word_contribution &lt;- health_tweets %&gt;% 
+  inner_join(get_sentiments(&quot;afinn&quot;), by = &quot;word&quot;) %&gt;% 
+  group_by(word) %&gt;% 
+  summarise(occurrences = n(),
+            contribution = sum(value))
+
+word_contribution</code></pre>
+<pre><code>## # A tibble: 1,525 x 3
+##    word      occurrences contribution
+##    &lt;chr&gt;           &lt;int&gt;        &lt;dbl&gt;
+##  1 abandon             5          -10
+##  2 abandoned           8          -16
+##  3 abandons            2           -4
+##  4 abduction           3           -6
+##  5 abilities           4            8
+##  6 ability            29           58
+##  7 aboard              2            2
+##  8 absorbed            3            3
+##  9 abuse             119         -357
+## 10 abused             12          -36
+## # ... with 1,515 more rows</code></pre>
+<pre class="r"><code>word_contribution %&gt;% 
+  top_n(25, abs(contribution)) %&gt;% 
+  mutate(word = reorder(word , contribution)) %&gt;% 
+  ggplot(aes(word, contribution, fill = contribution &gt; 0))+
+  geom_col(show.legend = FALSE)+
+  coord_flip()</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>These words seems reasonable as indicators of each tweets sentiment, but we can spot possible problems with the approach. “Care” could just as easily be a part of “don’t care” or a similar negative expression, and the word “Healthy” are apparently very common on the Health-Tweets but could easily be used in any contexts, positive or negative.</p>
+<p>We may also care about which words contributed most with in each newsgroup, so we can see which newsgroup might be incorrectly estimated. We can calculate each words’ contribution to each newsgroup’s sentiment score.</p>
+<pre class="r"><code>top_sentiment_words &lt;- words_by_newsgroup %&gt;% 
+  inner_join(get_sentiments(&quot;afinn&quot;),by = &quot;word&quot;) %&gt;% 
+  mutate(contribution = value * n / sum(n))
+
+top_sentiment_words %&gt;% 
+  filter(newsgroup == &quot;msnhealthnews&quot;, contribution &lt; 0) %&gt;% 
+  top_n(10, contribution) %&gt;% 
+  arrange(desc(contribution))</code></pre>
+<pre><code>## # A tibble: 39 x 5
+##    newsgroup     word           n value contribution
+##    &lt;chr&gt;         &lt;chr&gt;      &lt;int&gt; &lt;dbl&gt;        &lt;dbl&gt;
+##  1 msnhealthnews admit          1    -1   -0.0000247
+##  2 msnhealthnews admits         1    -1   -0.0000247
+##  3 msnhealthnews affected       1    -1   -0.0000247
+##  4 msnhealthnews ambivalent     1    -1   -0.0000247
+##  5 msnhealthnews avert          1    -1   -0.0000247
+##  6 msnhealthnews averted        1    -1   -0.0000247
+##  7 msnhealthnews awaits         1    -1   -0.0000247
+##  8 msnhealthnews axe            1    -1   -0.0000247
+##  9 msnhealthnews bias           1    -1   -0.0000247
+## 10 msnhealthnews block          1    -1   -0.0000247
+## # ... with 29 more rows</code></pre>
+<pre class="r"><code>top_sentiment_words %&gt;% 
+  filter( newsgroup %in% c(&quot;goodhealth&quot;,&quot;gdnhealthcare&quot;,&quot;msnhealthnews&quot;,&quot;cbchealth&quot;)) %&gt;% 
+  group_by(newsgroup) %&gt;%
+  top_n(10, abs(contribution)) %&gt;% 
+  ungroup() %&gt;% 
+  mutate(newsgroup = reorder(newsgroup, contribution),
+         word = reorder(paste(word, newsgroup, sep = &quot;_&quot;), contribution)) %&gt;% 
+  ggplot(aes(word, contribution, fill = contribution &gt; 0 ))+
+  geom_col(show.legend = FALSE)+
+  scale_x_discrete(labels = function(x) gsub(&quot;_.+&quot;,&quot;&quot;,x))+
+  facet_wrap( ~ newsgroup, scales = &quot;free&quot;)+
+  labs(x = &quot;&quot;,
+       y = &quot;Sentiment value * # of occurences&quot;)+
+  coord_flip()</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>This result support our hypothesis about the “GoodHealth” newsgroup: must of the sentiments was driven by positive adjectives such as “healthy”,“love”,“happy”… etc.</p>
+<p>As we can see here, the sentiment analysis was confounded by topic, for example the word “care”,“healthy” ,“love” discussed in different newsgroups as positive and “risk”,“loss” are discussed as negative which may require further examine the influential words before interpreting it.</p>
+</div>
+<div id="n-gram-analysis" class="section level3">
+<h3>N-gram analysis</h3>
+<p>Let’s take a look the effect of words such as “not” and “no” on the sentiment analysis.</p>
+<pre class="r"><code>tweet_bigram &lt;- cleaned_text %&gt;% 
+  unnest_tokens(bigram, text, token = &quot;ngrams&quot;, n = 2)
+
+tweet_bigram_counts &lt;- tweet_bigram %&gt;% 
+  count(newsgroup, bigram, sort = TRUE) %&gt;% 
+  separate(bigram, c(&quot;word1&quot;, &quot;word2&quot;), sep = &quot; &quot;)</code></pre>
+<p>We could then define a list of six words that we suspect are used in negation, such as “no”,“not” and “without” and visualize the sentiment-associate words that most often followed them. This shows the words that most often contributed in the “wrong” direction.</p>
+<pre class="r"><code>negate_words &lt;- c(&quot;not&quot;,&quot;without&quot;,&quot;no&quot;,&quot;can&#39;t&quot;, &quot;don&#39;t&quot;, &quot;won&#39;t&quot;)
+
+tweet_bigram_counts %&gt;% 
+  filter(word1 %in% negate_words) %&gt;% 
+  count(word1, word2, wt = n, sort = TRUE) %&gt;% 
+  inner_join(get_sentiments(&quot;afinn&quot;), by = c(word2 = &quot;word&quot;)) %&gt;% 
+  mutate(contribution = n*value) %&gt;% 
+  group_by(word1) %&gt;% 
+  top_n(10, abs(contribution)) %&gt;% 
+  ungroup() %&gt;% 
+  mutate(word2 = reorder(paste(word2, word1, sep = &quot;_&quot;), contribution)) %&gt;% 
+  ggplot(aes(word2, contribution, fill = contribution &gt; 0))+
+  geom_col(show.legend = FALSE)+
+  facet_wrap( ~ word1, scales = &quot;free&quot;, nrow = 3)+
+  scale_x_discrete(labels =function(x)gsub(&quot;_.+$&quot;,&quot;&quot;,x))+
+  xlab(&quot;Words preceded by a negation&quot;)+
+  ylab(&quot;Sentiment value * # of occurences&quot;)+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
+  coord_flip()</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p>It looks like the largest sources of misidentifying a word as positive come from “not help/good/perfect”, and the largest source of incorrectly classified negative sentiment is “don’t miss”.</p>
+</div>
+</div>
+<div id="comparing-word-usage" class="section level2">
+<h2>Comparing word usage</h2>
+<p>Since we have 16 newsgroups, I have select two news agencies randomly <em>Reuters</em> and New-<em>York</em> health tweets.</p>
+<pre class="r"><code>word_ratios &lt;- health_tweets %&gt;% 
+  filter(newsgroup %in% c(&quot;reuters_heatlth&quot;,&quot;nytimeshealth&quot;)) %&gt;% 
+  count(word, newsgroup) %&gt;% 
+  group_by(word) %&gt;% 
+  filter(sum(n) &gt;= 25) %&gt;% 
+  ungroup() %&gt;% 
+  spread(newsgroup, n, fill = 0) %&gt;% 
+  mutate_if(is.numeric,list(~(.+1) / (sum(.)+1))) %&gt;% 
+  mutate(logratio = log(nytimeshealth / reuters_heatlth)) %&gt;% 
+  arrange(desc(logratio))
+
+word_ratios %&gt;%
+  group_by(logratio &lt; 0) %&gt;%
+  top_n(15, abs(logratio)) %&gt;%
+  ungroup() %&gt;%
+  mutate(word = reorder(word, logratio)) %&gt;%
+  ggplot(aes(word, logratio, fill = logratio &lt; 0)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  ylab(&quot;log odds ratio (New York Times /Reuters )&quot;) +
+  scale_fill_discrete(name = &quot;&quot;, labels = c(&quot;New York Times&quot;, &quot;Reuters&quot;))</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>So New York times tweets about “Blog”,“Briefing” on the health tweets, while Reuters tweets health tweeted about “Uk”, “astrazeneca”, “pharma”.</p>
+</div>
+<div id="changes-in-word-use" class="section level2">
+<h2>Changes in word use</h2>
+<p>Which words’ frequencies have changed the fastest in our Twitter feeds? Or Which words have tweeted about at a higher or lower rate as time has passed?</p>
+<pre class="r"><code>library(lubridate)
+
+words_by_time &lt;- health_tweets %&gt;% 
+  filter(!str_detect(word,&quot;^@&quot;),
+         newsgroup %in% c(&quot;reuters_heatlth&quot;,&quot;nytimeshealth&quot;)) %&gt;% 
+  #filter(newsgroup %in% c(&quot;reuters_heatlth&quot;,&quot;nytimeshealth&quot;)) %&gt;%
+  mutate(time_floor = floor_date(date, unit = &quot;1 month&quot;)) %&gt;% 
+  count(time_floor, newsgroup, word) %&gt;% 
+  group_by(newsgroup, time_floor) %&gt;% 
+  mutate(time_total = sum(n)) %&gt;% 
+  group_by(newsgroup, word) %&gt;% 
+  mutate(word_total = sum(n)) %&gt;% 
+  ungroup() %&gt;% 
+  rename(count = n) %&gt;% 
+  filter(word_total &gt;= 35)
+ 
+  words_by_time</code></pre>
+<pre><code>## # A tibble: 2,336 x 6
+##    time_floor newsgroup     word     count time_total word_total
+##    &lt;date&gt;     &lt;chr&gt;         &lt;chr&gt;    &lt;int&gt;      &lt;int&gt;      &lt;int&gt;
+##  1 2013-04-01 nytimeshealth #askwell     2       1653         35
+##  2 2013-04-01 nytimeshealth abortion     7       1653         48
+##  3 2013-04-01 nytimeshealth africa       1       1653         54
+##  4 2013-04-01 nytimeshealth age         22       1653        262
+##  5 2013-04-01 nytimeshealth aids         3       1653         41
+##  6 2013-04-01 nytimeshealth benefits     6       1653         45
+##  7 2013-04-01 nytimeshealth blog        18       1653        227
+##  8 2013-04-01 nytimeshealth books        3       1653         42
+##  9 2013-04-01 nytimeshealth brain        6       1653         56
+## 10 2013-04-01 nytimeshealth breast       4       1653         80
+## # ... with 2,326 more rows</code></pre>
+<p>Each row in this data frame corresponds to one newsgroup using one word in a given time bin. The <code>count</code> column tells us how many times that person used that word in that time bin, the <code>time_total</code> column tells us how many words that person used during that time bin, and the <code>word_total</code> column tells us how many times that person used that word over the whole year. This is the data set we can use for modeling.</p>
+<pre class="r"><code>nested_data &lt;- words_by_time %&gt;% 
+  nest(-word, -newsgroup)
+
+nested_data</code></pre>
+<pre><code>## # A tibble: 179 x 3
+##    newsgroup     word     data             
+##    &lt;chr&gt;         &lt;chr&gt;    &lt;list&gt;           
+##  1 nytimeshealth #askwell &lt;tibble [15 x 4]&gt;
+##  2 nytimeshealth abortion &lt;tibble [12 x 4]&gt;
+##  3 nytimeshealth africa   &lt;tibble [12 x 4]&gt;
+##  4 nytimeshealth age      &lt;tibble [21 x 4]&gt;
+##  5 nytimeshealth aids     &lt;tibble [14 x 4]&gt;
+##  6 nytimeshealth benefits &lt;tibble [18 x 4]&gt;
+##  7 nytimeshealth blog     &lt;tibble [21 x 4]&gt;
+##  8 nytimeshealth books    &lt;tibble [19 x 4]&gt;
+##  9 nytimeshealth brain    &lt;tibble [17 x 4]&gt;
+## 10 nytimeshealth breast   &lt;tibble [20 x 4]&gt;
+## # ... with 169 more rows</code></pre>
+<blockquote>
+<p>We can think about this modeling procedure answering a question like, “Was a given word mentioned in a given time bin? Yes or no? How does the count of word mentions depend on time?”</p>
+</blockquote>
+<pre class="r"><code>library(purrr)
+
+nested_model &lt;- nested_data %&gt;% 
+  mutate(models = map(data, ~ glm(cbind(count,time_total) ~ time_floor, .,
+                      family = &quot;binomial&quot;)))
+nested_model</code></pre>
+<pre><code>## # A tibble: 179 x 4
+##    newsgroup     word     data              models
+##    &lt;chr&gt;         &lt;chr&gt;    &lt;list&gt;            &lt;list&gt;
+##  1 nytimeshealth #askwell &lt;tibble [15 x 4]&gt; &lt;glm&gt; 
+##  2 nytimeshealth abortion &lt;tibble [12 x 4]&gt; &lt;glm&gt; 
+##  3 nytimeshealth africa   &lt;tibble [12 x 4]&gt; &lt;glm&gt; 
+##  4 nytimeshealth age      &lt;tibble [21 x 4]&gt; &lt;glm&gt; 
+##  5 nytimeshealth aids     &lt;tibble [14 x 4]&gt; &lt;glm&gt; 
+##  6 nytimeshealth benefits &lt;tibble [18 x 4]&gt; &lt;glm&gt; 
+##  7 nytimeshealth blog     &lt;tibble [21 x 4]&gt; &lt;glm&gt; 
+##  8 nytimeshealth books    &lt;tibble [19 x 4]&gt; &lt;glm&gt; 
+##  9 nytimeshealth brain    &lt;tibble [17 x 4]&gt; &lt;glm&gt; 
+## 10 nytimeshealth breast   &lt;tibble [20 x 4]&gt; &lt;glm&gt; 
+## # ... with 169 more rows</code></pre>
+<pre class="r"><code>library(broom)
+
+slopes &lt;- nested_model %&gt;% 
+  mutate(models = map(models, tidy)) %&gt;% 
+  unnest(cols = c(models)) %&gt;% 
+  filter(term == &quot;time_floor&quot;) %&gt;% 
+  mutate(adjusted.p.value = p.adjust(p.value))
+
+
+top_slopes &lt;- slopes %&gt;% 
+  filter(adjusted.p.value &lt; 0.05)
+
+top_slopes</code></pre>
+<pre><code>## # A tibble: 15 x 9
+##    newsgroup word  data  term  estimate std.error statistic  p.value
+##    &lt;chr&gt;     &lt;chr&gt; &lt;lis&gt; &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+##  1 nytimesh~ age   &lt;tib~ time~ -0.00135  0.000302     -4.46 8.22e- 6
+##  2 nytimesh~ blog  &lt;tib~ time~ -0.00131  0.000324     -4.03 5.58e- 5
+##  3 nytimesh~ canc~ &lt;tib~ time~ -0.00136  0.000313     -4.33 1.51e- 5
+##  4 nytimesh~ cdc   &lt;tib~ time~  0.00429  0.00106       4.02 5.70e- 5
+##  5 nytimesh~ reci~ &lt;tib~ time~ -0.00397  0.000512     -7.75 8.93e-15
+##  6 nytimesh~ ebola &lt;tib~ time~  0.00660  0.000835      7.91 2.62e-15
+##  7 reuters_~ cali~ &lt;tib~ time~  0.00737  0.00174       4.23 2.37e- 5
+##  8 reuters_~ cdc   &lt;tib~ time~ -0.00573  0.00133      -4.31 1.63e- 5
+##  9 reuters_~ ebola &lt;tib~ time~ -0.00226  0.000370     -6.12 9.44e-10
+## 10 reuters_~ study &lt;tib~ time~ -0.00294  0.000754     -3.90 9.82e- 5
+## 11 reuters_~ afri~ &lt;tib~ time~ -0.00608  0.00126      -4.83 1.36e- 6
+## 12 reuters_~ bird  &lt;tib~ time~  0.00574  0.00136       4.21 2.51e- 5
+## 13 reuters_~ flu   &lt;tib~ time~  0.00710  0.00118       6.00 2.02e- 9
+## 14 reuters_~ meas~ &lt;tib~ time~  0.0114   0.00227       5.01 5.36e- 7
+## 15 reuters_~ nurse &lt;tib~ time~ -0.00840  0.00177      -4.75 2.06e- 6
+## # ... with 1 more variable: adjusted.p.value &lt;dbl&gt;</code></pre>
+<p>Let’s plot the above words use for both New York times and Reuters Health tweets over year of tweets.</p>
+<pre class="r"><code>words_by_time %&gt;% 
+  inner_join(top_slopes, by = c(&quot;word&quot;, &quot;newsgroup&quot;)) %&gt;% 
+  filter(newsgroup == &quot;nytimeshealth&quot;) %&gt;% 
+  ggplot(aes(time_floor, count/time_total, color = word))+
+  geom_line(size = 1.25)+
+  scale_x_date(date_labels = &quot;%b-%Y&quot;)+
+  labs(x = NULL, y = &quot;Words of frequency&quot;)</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>New York time health tweeted a lot about the Ebola which was an outbeak during the last of 2013.</p>
+<pre class="r"><code>words_by_time %&gt;% 
+  inner_join(top_slopes, by = c(&quot;word&quot;, &quot;newsgroup&quot;)) %&gt;% 
+  filter(newsgroup == &quot;reuters_heatlth&quot;) %&gt;% 
+  ggplot(aes(time_floor, count/time_total, color = word))+
+  geom_line(size = 1.15)+
+  scale_x_date(date_labels = &quot;%b-%Y&quot;)+
+  labs(x = NULL, y = &quot;Words of frequency&quot;)</code></pre>
+<p><img src="/post/2020-09-05-health-tweet-analysis_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Reuters Health also tweeted alot about the Ebola for long period of months as compared to the New York time health tweets, as we see from the graph Reuters tweeted more about “Ebola”.</p>
+</div>
+</div>
+
+    
+    
+    
+        <h4 class="page-header">Related</h4>
+         <div class="item">
+
+    
+    
+    
+
+    
+    
+
+    <h4><a href="/post/2015-07-23-r-rmarkdown/">Hello R Markdown</a></h4>
+    <h5>July 23, 2015</h5>
+    
+<a href="/tags/r-markdown"><kbd class="item-tag">R Markdown</kbd></a>
+
+<a href="/tags/plot"><kbd class="item-tag">plot</kbd></a>
+
+<a href="/tags/regression"><kbd class="item-tag">regression</kbd></a>
+
+
+
+</div>
+ 
+    
+
+    
+    
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+

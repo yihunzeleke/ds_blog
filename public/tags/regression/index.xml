@@ -6,10 +6,22 @@
     <description>Recent content in regression on Exploring Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/regression/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Health Tweet analysis</title>
+      <link>/post/health-tweet-analysis/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/health-tweet-analysis/</guid>
+      <description>Project ideaThere are different health tweets from different news agencies. This health tweets from bbc, cbc,and many more.The data is publicly available here.
+
+Data pre-processingI will start by reading the all the 16 health tweets from news agencies.
+library(dplyr)library(tidyr)library(purrr)library(readr)library(ggplot2)library(textdata)theme_set(theme_bw())raw_text &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/yihunzeleke/data_repo/master/raw_text.csv&amp;quot;)raw_text## # A tibble: 63,327 x 4## newsgroup date text id## &amp;lt;chr&amp;gt; &amp;lt;date&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;## 1 bbchealth 2015-04-09 Breast cancer risk test devised http://bbc.</description>
+    </item>
     
     <item>
       <title>Hello R Markdown</title>
