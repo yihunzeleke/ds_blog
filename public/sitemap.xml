@@ -3,33 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/project/project1/</loc>
-  </url>
-  
-  <url>
-    <loc>/project/project2/</loc>
-  </url>
-  
-  <url>
-    <loc>/project/project3/</loc>
-  </url>
-  
-  <url>
-    <loc>/project/project4/</loc>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2015-07-23-r-rmarkdown/</loc>
+    <loc>/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>/post/2015-07-23-r-rmarkdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
@@ -125,38 +109,6 @@
   
   <url>
     <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/bootstrap/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/css/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/highlight-js/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/html/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/js/</loc>
-  </url>
-  
-  <url>
-    <loc>/project/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/responsive/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/syntax-highlighting/</loc>
   </url>
   
 </urlset>
