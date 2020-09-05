@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Exploring Data</title>
-    <link>/tags/</link>
+    <link>http://example.com/tags/</link>
     <description>Recent content in Tags on Exploring Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>data wragling</title>
-      <link>/tags/data-wragling/</link>
+      <link>http://example.com/tags/data-wragling/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/data-wragling/</guid>
+      <guid>http://example.com/tags/data-wragling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>regression</title>
-      <link>/tags/regression/</link>
+      <link>http://example.com/tags/regression/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/regression/</guid>
+      <guid>http://example.com/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sentiment-analysis</title>
-      <link>/tags/sentiment-analysis/</link>
+      <link>http://example.com/tags/sentiment-analysis/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/sentiment-analysis/</guid>
+      <guid>http://example.com/tags/sentiment-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>text mining</title>
-      <link>/tags/text-mining/</link>
+      <link>http://example.com/tags/text-mining/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/text-mining/</guid>
+      <guid>http://example.com/tags/text-mining/</guid>
       <description></description>
     </item>
     
     <item>
       <title>topic modeling</title>
-      <link>/tags/topic-modeling/</link>
+      <link>http://example.com/tags/topic-modeling/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/topic-modeling/</guid>
+      <guid>http://example.com/tags/topic-modeling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>visualization</title>
-      <link>/tags/visualization/</link>
+      <link>http://example.com/tags/visualization/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/visualization/</guid>
+      <guid>http://example.com/tags/visualization/</guid>
       <description></description>
     </item>
     

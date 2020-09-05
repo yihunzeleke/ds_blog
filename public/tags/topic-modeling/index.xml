@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>topic modeling on Exploring Data</title>
-    <link>/tags/topic-modeling/</link>
+    <link>http://example.com/tags/topic-modeling/</link>
     <description>Recent content in topic modeling on Exploring Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/topic-modeling/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.com/tags/topic-modeling/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Health Tweet analysis</title>
-      <link>/post/health-tweet-analysis/</link>
+      <link>http://example.com/post/health-tweet-analysis/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/health-tweet-analysis/</guid>
+      <guid>http://example.com/post/health-tweet-analysis/</guid>
       <description>Project ideaThere are different health tweets from different news agencies. This health tweets from bbc, cbc,and many more.The data is publicly available here.
 
 Data pre-processingI will start by reading the all the 16 health tweets from news agencies.

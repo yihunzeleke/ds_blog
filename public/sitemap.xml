@@ -3,142 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/categories/</loc>
+    <loc>http://example.com/categories/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/data-wragling/</loc>
+    <loc>http://example.com/tags/data-wragling/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>http://example.com/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/health-tweet-analysis/</loc>
+    <loc>http://example.com/post/health-tweet-analysis/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>http://example.com/post/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
+    <loc>http://example.com/categories/r/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/regression/</loc>
+    <loc>http://example.com/tags/regression/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/sentiment-analysis/</loc>
+    <loc>http://example.com/tags/sentiment-analysis/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>http://example.com/tags/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/text-mining/</loc>
+    <loc>http://example.com/tags/text-mining/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/topic-modeling/</loc>
+    <loc>http://example.com/tags/topic-modeling/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/visualization/</loc>
+    <loc>http://example.com/tags/visualization/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/go/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/golang/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/hugo/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/themes/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/template/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/static-site-generator/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
+    <loc>http://example.com/about/</loc>
   </url>
   
 </urlset>
