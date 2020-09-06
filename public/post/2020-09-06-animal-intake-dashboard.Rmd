@@ -1,0 +1,20 @@
+---
+title: Animal-intake Dashboard
+author: yihun zeleke
+date: '2020-05-04'
+categories:
+  - R
+tags:
+  - data wragling
+  - flexdashboard
+  - visualization
+slug: animal-intake-dashboard
+---
+## This project is based on the Animal Center Intakes from Oct, 1st 2013 to present. Intakes represent the status of animals as they arrive at the Animal Center. All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners. The data is availabel [here](https://data.austintexas.gov/Health-and-Community-Services/Austin-Animal-Center-Intakes/wter-evkm/data)
+
+## For the final product  
+
+<a href = "https://yihunzeleke.shinyapps.io/Animal-intake/#section-interactive-data-visualization"></a>
+
+
+![](/post/2020-09-06-animal-intake-dashboard_files/dashboard-screencapture.PNG)

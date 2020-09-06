@@ -23,5 +23,15 @@
 library(dplyr)library(tidyr)library(purrr)library(readr)library(ggplot2)library(textdata)theme_set(theme_bw())raw_text &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/yihunzeleke/data_repo/master/raw_text.csv&amp;quot;)raw_text## # A tibble: 63,327 x 4## newsgroup date text id## &amp;lt;chr&amp;gt; &amp;lt;date&amp;gt; &amp;lt;chr&amp;gt; &amp;lt;dbl&amp;gt;## 1 bbchealth 2015-04-09 Breast cancer risk test devised http://bbc.</description>
     </item>
     
+    <item>
+      <title>Animal-intake Dashboard</title>
+      <link>/post/animal-intake-dashboard/</link>
+      <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/animal-intake-dashboard/</guid>
+      <description>This project is based on the Animal Center Intakes from Oct, 1st 2013 to present. Intakes represent the status of animals as they arrive at the Animal Center. All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners. The data is availabel hereFor the final product
+</description>
+    </item>
+    
   </channel>
 </rss>
