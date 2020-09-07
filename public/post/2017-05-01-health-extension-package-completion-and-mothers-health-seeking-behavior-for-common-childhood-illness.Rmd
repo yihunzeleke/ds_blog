@@ -1,0 +1,60 @@
+---
+title: Health Extension Package and Mother's Health Seeking Behavior for Common Childhood
+  Illness
+author: yihun zeleke
+date: '2017-05-01'
+categories:
+  - R
+slug: health-extension-package-completion-and-mothers-health-seeking-behavior-for-common-childhood-illness
+---
+# Abstract  
+**Background** - Mothers' health care seeking behaviors have importance to avoid many deaths 
+attributed to delays and mothers' response for signs and symptoms of childhood illness is very 
+crucial to  reduce severity and  complications.  Mothers from  Ethiopia delay in appropriate care 
+from health institutions and not seek any care contributes to the large number of child deaths. 
+To improve the  mothers 'health  seeking  behaviors and coverage of basic health care services 
+health extension package program remains the core to reduce  child deaths  in rural residences. 
+This  study  assesses  health  extension  package  completion  and  mothers'  health  seeking 
+behavior for common childhood illness in South Achefer district of West Gojjam.  
+
+**Objective**  -  The main objective  of this study is to  assess  health  extension package completion 
+and  mothers'  health  seeking  behavior  for  common  childhood  illness  mainly  diarrhea,  febrile 
+illness and ARI in South Achefer district West Gojjam Ethiopia.  
+
+## Methods  
+A  comparative  community  based  cross-sectional  study  was  conducted  among  239
+from  graduated  and  239  from  not-graduated  mothers  having  under-five  child  with  childhood 
+illness  in South Achefer District from November 2016 to April 2017. Sample size was calculated 
+by two population proportion formula by using STATA  version 12.0, and proportional allocation 
+was used  to  allocate for  each selected rural kebeles.  Systematic random sampling  technique 
+was  used  and  to select study  participants.  The health seeking behavior  data  was  collected  by 
+well-trained  data  collectors  and  interview  based  structured  questionnaire  was  used.  The
+collected  data  was  entered  into  Cspro  version  6.3  and  exported  to  SPSS  version  23.0  for 
+analysis. Odds ratio with 95% CI was computed to assess the strength of the associations.   
+
+## Results  
+A  total  of  478(239  from  graduated  and  239  from  not-graduated)  mothers  were 
+interviewed  among  these  41.2%  of  mothers  were  sought  health  care  in  the  south  Achefer 
+district.  Health  seeking  behavior  for mothers from graduated  households  49.4%  and mothers 
+from  not-graduated  households  33.1%.  Age  of  the  mothers,  educational  status,  numbers  of 
+family members, perceived severity  and age of child  showed a significant association for health 
+seeking behavior of mothers for common childhood illness  in graduated households.  Whereas 
+educational status, monthly income,  number of under-five child, perceived severity, sex of child 
+and age of child  showed a significant association for health care seeking behavior of mothers 
+from not-graduated households.
+
+## Conclusion  
+Mothers from graduated household seek health care more than mothers from notgraduated.  Age  of  the  mothers,  educational  status,  number  of  family  members,  perceived 
+severity  and  age  of  child  showed  a  significant  association  for  health  seeking  behavior  of 
+mothers for common childhood illness  in graduated households.  Whereas educational status, 
+monthly income,  number of under-five child, perceived severity, sex of child and age of child
+showed  a  significant  association  for  health  care  seeking  behavior  of  mothers  from  notgraduated households. Work on improve family planning service in the community, HEW create 
+awareness in the community to increase the health seeking behavior of mothers  regardless of 
+graduation  status,  concerned  bodies  should  intervene  the  sustainability  of  graduated 
+households that don't relapse from the graduation status.   
+
+
+The full research findings and results can be found [here](https://cvws.icloud-content.com/B/AdbZZongpN6PV51SxY80i3Gxqbx4AQcQT3kvwt_5sIphuXZSvqMtAtqP/FinalPaper.pdf?o=Ak-vFJ1wldJgrCtUpCjbxFCFPNtdTKxOxW0YOCuZHaOx&v=1&x=3&a=CAogqnRmlusIrzYoe0eaw_hjU1dwx4K1V_7GrcABy2phGTASbxDO0ebUxi4Y7sid1cYuIgEAUgSxqbx4WgQtAtqPaichdzl4_cgA7LUSGPcK6h4oqQZDz8JdjQCVn0IxpNFytw9Aveug1zhyJwvnZVTMf7UP_wQdm_jgW0IOahrT8CcTQX08F4jstDVj1rHW3Adv1A&e=1599517189&fl=&r=a52b64ee-4c4c-4fb3-9eed-186912f52b62-1&k=CHKfyWkQZf15FEnX6ra3dA&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=53&s=PQILJ_LavFmZ_HXEkx0bgeI_EB8&cd=i).
+
+
+
