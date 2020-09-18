@@ -54,7 +54,7 @@ graduation  status,  concerned  bodies  should  intervene  the  sustainability  
 households that don't relapse from the graduation status.   
 
 
-The full research findings and results can be found [here](https://cvws.icloud-content.com/B/AdbZZongpN6PV51SxY80i3Gxqbx4AQcQT3kvwt_5sIphuXZSvqMtAtqP/FinalPaper.pdf?o=Ak-vFJ1wldJgrCtUpCjbxFCFPNtdTKxOxW0YOCuZHaOx&v=1&x=3&a=CAogqnRmlusIrzYoe0eaw_hjU1dwx4K1V_7GrcABy2phGTASbxDO0ebUxi4Y7sid1cYuIgEAUgSxqbx4WgQtAtqPaichdzl4_cgA7LUSGPcK6h4oqQZDz8JdjQCVn0IxpNFytw9Aveug1zhyJwvnZVTMf7UP_wQdm_jgW0IOahrT8CcTQX08F4jstDVj1rHW3Adv1A&e=1599517189&fl=&r=a52b64ee-4c4c-4fb3-9eed-186912f52b62-1&k=CHKfyWkQZf15FEnX6ra3dA&ckc=com.apple.clouddocs&ckz=com.apple.CloudDocs&p=53&s=PQILJ_LavFmZ_HXEkx0bgeI_EB8&cd=i).
+The full research findings and results can be found [here](https://github.com/yihunzeleke/data_repo/blob/master/FinalPaper.pdf).
 
 
 
