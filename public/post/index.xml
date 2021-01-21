@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Exploring Data</title>
-    <link>http://example.com/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Exploring Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Socio-Economic indicators of Ethiopia</title>
-      <link>http://example.com/post/socio-economic-indicators-of-ethiopia/</link>
+      <link>/post/socio-economic-indicators-of-ethiopia/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/post/socio-economic-indicators-of-ethiopia/</guid>
+      <guid>/post/socio-economic-indicators-of-ethiopia/</guid>
       <description>Project OverviewEthiopia is located in East Africa one the oldest nations in the world. Ethiopia has faced different natural and human made problems. The country one on the former members of the United Nations and the founder of the African Union. One of the UnColonized nations in the world history. Ethiopia implemented different economic and social strategies for the development of its nations.</description>
     </item>
     
     <item>
       <title>Health Tweet analysis</title>
-      <link>http://example.com/post/health-tweet-analysis/</link>
+      <link>/post/health-tweet-analysis/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/post/health-tweet-analysis/</guid>
+      <guid>/post/health-tweet-analysis/</guid>
       <description>Project ideaThere are different health tweets from different news agencies. This health tweets from bbc, cbc,and many more.The data is publicly available here.
 
 Data pre-processingI will start by reading the all the 16 health tweets from news agencies.
@@ -34,20 +34,20 @@ library(dplyr)library(tidyr)library(purrr)library(readr)library(ggplot2)lib
     
     <item>
       <title>Animal-intake Dashboard</title>
-      <link>http://example.com/post/animal-intake-dashboard/</link>
+      <link>/post/animal-intake-dashboard/</link>
       <pubDate>Mon, 04 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/post/animal-intake-dashboard/</guid>
+      <guid>/post/animal-intake-dashboard/</guid>
       <description>Project ideaThis project is based on the Animal Center Intakes from Oct, 1st 2013 to present. Intakes represent the status of animals as they arrive at the Animal Center. All animals receive a unique Animal ID during intake. Annually over 90% of animals entering the center, are adopted, transferred to rescue or returned to their owners.
 The data is availabel here. For the final product of interactive dashboard click here.</description>
     </item>
     
     <item>
       <title>Health Extension Package and Mother&#39;s Health Seeking Behavior for Common Childhood Illness</title>
-      <link>http://example.com/post/health-extension-package-completion-and-mothers-health-seeking-behavior-for-common-childhood-illness/</link>
+      <link>/post/health-extension-package-completion-and-mothers-health-seeking-behavior-for-common-childhood-illness/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://example.com/post/health-extension-package-completion-and-mothers-health-seeking-behavior-for-common-childhood-illness/</guid>
+      <guid>/post/health-extension-package-completion-and-mothers-health-seeking-behavior-for-common-childhood-illness/</guid>
       <description>AbstractBackground - Mothers’ health care seeking behaviors have importance to avoid many deathsattributed to delays and mothers’ response for signs and symptoms of childhood illness is verycrucial to reduce severity and complications. Mothers from Ethiopia delay in appropriate carefrom health institutions and not seek any care contributes to the large number of child deaths.To improve the mothers ‘health seeking behaviors and coverage of basic health care serviceshealth extension package program remains the core to reduce child deaths in rural residences.</description>
     </item>
     

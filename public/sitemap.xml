@@ -3,87 +3,87 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.com/categories/</loc>
+    <loc>/categories/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/tags/data-wragling/</loc>
+    <loc>/tags/data-wragling/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/</loc>
+    <loc>/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/categories/r/</loc>
+    <loc>/categories/r/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/post/socio-economic-indicators-of-ethiopia/</loc>
+    <loc>/post/socio-economic-indicators-of-ethiopia/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/tags/visualization/</loc>
+    <loc>/tags/visualization/</loc>
     <lastmod>2021-01-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/post/health-tweet-analysis/</loc>
+    <loc>/post/health-tweet-analysis/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/tags/regression/</loc>
+    <loc>/tags/regression/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/tags/sentiment-analysis/</loc>
+    <loc>/tags/sentiment-analysis/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/tags/text-mining/</loc>
+    <loc>/tags/text-mining/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/tags/topic-modeling/</loc>
+    <loc>/tags/topic-modeling/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/post/animal-intake-dashboard/</loc>
+    <loc>/post/animal-intake-dashboard/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/tags/flexdashboard/</loc>
+    <loc>/tags/flexdashboard/</loc>
     <lastmod>2020-05-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/post/health-extension-package-completion-and-mothers-health-seeking-behavior-for-common-childhood-illness/</loc>
+    <loc>/post/health-extension-package-completion-and-mothers-health-seeking-behavior-for-common-childhood-illness/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.com/about/</loc>
+    <loc>/about/</loc>
   </url>
   
 </urlset>
